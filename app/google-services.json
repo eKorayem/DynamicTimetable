@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "466025954747",
+    "project_id": "dynamictimetable-fe220",
+    "storage_bucket": "dynamictimetable-fe220.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466025954747:android:70a64dfa5de2060005589e",
+        "android_client_info": {
+          "package_name": "com.example.dynamictimetable"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBhMKnVx-TYXf1xNAaiEhjDNTv9Qy2Shk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
