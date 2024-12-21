@@ -1,128 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:id="@+id/content_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <RelativeLayout
-            android:id="@+id/page_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            tools:ignore="UselessParent">
-
-            <RelativeLayout
-                android:id="@+id/student_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/backgrond_main">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
-                <ImageView
-                    android:id="@+id/backbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backarrow"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints" />
-
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="350dp"
-                    android:layout_height="220dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="102dp"
-                    android:layout_marginEnd="33dp"
-                    android:src="@drawable/logo"
-                    tools:ignore="ContentDescription" />
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-                <TextView
-                    android:id="@+id/waqt"
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/logo"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="89dp"
-                    android:layout_marginTop="42dp"
-                    android:layout_marginEnd="100dp"
-                    android:gravity="center"
-                    android:text="Welcome to DTT"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/infowaqt"
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/waqt"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="54dp"
-                    android:layout_marginTop="29dp"
-                    android:layout_marginEnd="55dp"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="The Collage Dynamic Timetable"
-                    android:textSize="13sp"
-                    android:textStyle="normal" />
 
 
-                <Button
-                    android:id="@+id/login_main_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/infowaqt"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="66dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/btn_main"
-                    android:text="Login"
-                    android:textSize="22sp"
-                    app:backgroundTint="@null"
-                    app:cornerRadius="50dp" />
 
-                <Button
-                    android:id="@+id/register_main_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/login_main_btn"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/btn_main"
-                    android:text="Register"
-                    android:textSize="22sp"
-                    app:backgroundTint="@null"
-                    app:cornerRadius="50dp" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.3"
+        tools:ignore="ContentDescription" />
 
 
-            </RelativeLayout>
+    <TextView
+        android:id="@+id/waqt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Welcome to DTT"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        </RelativeLayout>
-    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/infowaqt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:text="The College Dynamic Timetable"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/waqt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <Button
+        android:id="@+id/login_main_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/btn_main"
+        app:backgroundTint="@null"
+        android:text="Login"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infowaqt" />
+
+    <Button
+        android:id="@+id/register_main_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/btn_main"
+        app:backgroundTint="@null"
+        android:text="Register"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_main_btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

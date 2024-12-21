@@ -55,12 +55,13 @@ public class RegisterActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
 
-        goBack = findViewById(R.id.backButton_register);
-        goBack.setOnClickListener(new View.OnClickListener() {
+        ImageView backButton = findViewById(R.id.backButton_register);
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                finish();
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // Optional: Closes RegisterActivity so it doesn't remain in the back stack
             }
         });
 
@@ -108,6 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                 else registerUser(email, password, collage_id, selectedLevel, selectedSection);
             }
         });
+
 
     }
 
